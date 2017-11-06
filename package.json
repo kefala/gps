@@ -1,0 +1,22 @@
+{
+  "name": "gps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "lite-server -c config.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kefala/gps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kefala/gps/issues"
+  },
+  "homepage": "https://github.com/kefala/gps#readme",
+  "dependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
