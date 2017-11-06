@@ -1,5 +1,5 @@
 var cacheName = 'weatherPWA-step-6-1';
-var filesToCache = ['./android-icon-192x192.png','./manifest.json','./main.js', './index.html', './'];
+var filesToCache = ['./android-icon-192x192.png','./manifest.json','./main.js', './index.html', './', './sw.js'];
 
 self.addEventListener('install', function(e) {
     console.log('[ServiceWorker] Install');
