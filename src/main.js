@@ -1,10 +1,17 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const x = document.getElementById('demo');
-
+    x.innerHTML = "Cargando";
     function getLocation() {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
+            navigator.geolocation.getCurrentPosition(showPosition,
+                function(error){
+                     alert(error.message);
+                }, {
+                     enableHighAccuracy: true
+                          ,timeout : 5000
+                }
+            );
         } else {
             x.innerHTML = "Geolocation is not supported by this browser.";
         }
