@@ -24,8 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     getLocation();
 
-    navigator.serviceWorker
-    .register('./sw.js')
-    .then(function() { console.log('Service Worker Registered'); });
+    // navigator.serviceWorker
+    // .register('./sw.js')
+    // .then(function() { console.log('Service Worker Registered'); });
 });
 
