@@ -1,5 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
     const x = document.getElementById('demo');
     x.innerHTML = "Cargando";
     function getLocation() {
