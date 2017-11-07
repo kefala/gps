@@ -7,9 +7,6 @@ window.addEventListener('DOMContentLoaded', () => {
             navigator.geolocation.getCurrentPosition(showPosition,
                 function(error){
                     showError(error.message);
-                }, {
-                     enableHighAccuracy: true
-                          ,timeout : 5000
                 }
             );
         } else {
