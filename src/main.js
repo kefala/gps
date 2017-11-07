@@ -1,12 +1,12 @@
 
 window.addEventListener('DOMContentLoaded', () => {
     const x = document.getElementById('demo');
-    x.innerHTML = "Cargando";
+    x.innerHTML = "";
     function getLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition,
                 function(error){
-                     alert(error.message);
+                    showError(error.message);
                 }, {
                      enableHighAccuracy: true
                           ,timeout : 5000
@@ -17,12 +17,20 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
     function showPosition(position) {
-        x.innerHTML = "Latitude: " + position.coords.latitude + 
-        "<br>Longitude: " + position.coords.longitude +
-        "<br>Accuracy: " + position.coords.accuracy; 
+        const e = document.createElement('p');
+        e.textContent = "Latitude: " + position.coords.latitude + 
+        " Longitude: " + position.coords.longitude +
+        " Accuracy: " + position.coords.accuracy;
+        x.appendChild(e);
     }
-
-    getLocation();
+    function showError(error) {
+        const e = document.createElement('p');
+        e.textContent = error;
+        x.appendChild(e);
+    }
+    setInterval(() => {
+        getLocation();        
+    }, 2000);
 
     navigator.serviceWorker
     .register('./sw.js')
