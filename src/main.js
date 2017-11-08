@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 {
                     enableHighAccuracy: true,
                     timeout: 3000,
-                    maximumAge:1000,
+                    maximumAge: 0,
                 }
             );
         } else {
