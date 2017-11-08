@@ -7,6 +7,11 @@ window.addEventListener('DOMContentLoaded', () => {
             navigator.geolocation.getCurrentPosition(showPosition,
                 function(error){
                     showError(error.message);
+                },
+                {
+                    enableHighAccuracy: true,
+                    timeout: 3000,
+                    maximumAge:1000,
                 }
             );
         } else {
@@ -27,7 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     setInterval(() => {
         getLocation();        
-    }, 2000);
+    }, 5000);
 
     navigator.serviceWorker
     .register('./sw.js')
